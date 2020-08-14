@@ -6,18 +6,19 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-posts-table',
   templateUrl: './posts-table.component.html',
-  styleUrls: ['./posts-table.component.css']
+  styleUrls: ['./posts-table.component.css'],
 })
 export class PostsTableComponent implements OnInit, OnDestroy {
-
   blogPosts: Array<BlogPost> = [];
 
   private posts;
 
-  constructor(private data: PostService, private router: Router) { }
+  constructor(private data: PostService, private router: Router) {}
 
   ngOnInit(): void {
-    this.posts = this.data.getAllPosts().subscribe(data => this.blogPosts = data);
+    this.posts = this.data
+      .getAllPosts()
+      .subscribe((data) => (this.blogPosts = data));
   }
 
   ngOnDestroy() {
@@ -27,5 +28,4 @@ export class PostsTableComponent implements OnInit, OnDestroy {
   rowClicked(e, id) {
     this.router.navigate(['/admin/post', id]);
   }
-
 }

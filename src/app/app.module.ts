@@ -13,7 +13,7 @@ import { BlogComponent } from './blog/blog.component';
 import { PostComponent } from './post/post.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PostCardComponent } from './post-card/post-card.component';
-import { SerachWidgetComponent } from './serach-widget/serach-widget.component';
+import { SearchWidgetComponent } from './search-widget/search-widget.component';
 import { LatestPostsComponent } from './latest-posts/latest-posts.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { TagsComponent } from './tags/tags.component';
@@ -34,7 +34,7 @@ import { NewPostComponent } from './new-post/new-post.component';
     PostComponent,
     PageNotFoundComponent,
     PostCardComponent,
-    SerachWidgetComponent,
+    SearchWidgetComponent,
     LatestPostsComponent,
     CategoriesComponent,
     TagsComponent,
@@ -43,15 +43,10 @@ import { NewPostComponent } from './new-post/new-post.component';
     FooterPostsComponent,
     PostsTableComponent,
     EditPostComponent,
-    NewPostComponent
+    NewPostComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
